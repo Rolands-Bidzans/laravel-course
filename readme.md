@@ -33,9 +33,13 @@ npm versija: 10.5.2
 5. Failā `config.js` iestatiet derīgu lietotāja vārdu un paroli.
    
     `validCredentials: {
+   
           email: 'Rolandsnorigas@gmail.com',
+   
           password: 'GIMazaisPipars@r2',
+   
          /* email: '???????????????',
+   
           password: '?????????????'*/
     },`
 
