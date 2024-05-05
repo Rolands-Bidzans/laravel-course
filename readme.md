@@ -44,29 +44,29 @@ Lai palaistu testus, izmantojiet:
 
 ### Visu testu palaišana
 Visu testu palaišana crome browserī(default)
--npm run test
+-`npm run test`
 
 Visu testu palaišana norādot browseri
--npm test -- --env firefox
+-`npm test -- --env firefox`
 vai
--npm test -- --env chrome
+-`npm test -- --env chrome`
 
 ### Konkrēta testa palaišana
 Testu palaišana (default) browserī
 npm run test -- -t {src}/{test}
 
 Testus var palaist chrome(default) browserī sekojoši:
--npm test -- -t .\tests\loginTests.js
--npm test -- -t .\tests\repositoryTests.js
--npm test -- -t .\tests\topicDescriptionTests.js
+-`npm test -- -t .\tests\loginTests.js`
+-`npm test -- -t .\tests\repositoryTests.js`
+-`npm test -- -t .\tests\topicDescriptionTests.js`
 
 Testu palaišana norādot browseri
 npm test -- -t {src}/{test} --env {browser}
 
 Testus var palaist chrome vai firefox browseros sekojoši:
--npm test -- -t .\tests\loginTests.js --env chrome
--npm test -- -t .\tests\repositoryTests.js --env firefox
--npm test -- -t .\tests\topicDescriptionTests.js --env firefox
+-`npm test -- -t .\tests\loginTests.js --env chrome`
+-`npm test -- -t .\tests\repositoryTests.js --env firefox`
+-`npm test -- -t .\tests\topicDescriptionTests.js --env firefox`
 
 
 ### Testu palaišana konkrētā browserī
