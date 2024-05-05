@@ -30,7 +30,7 @@ npm versija: 10.5.2
 2. Pārliecinieties, ka jums ir instalētas Node.js un npm.
 3. Izmantojot terminālu, pārvietojieties uz projekta mapes atrašanās vietu.
 4. Izpildiet komandu `npm install`, lai instalētu projekta atkarības.
-5. Failā `config.js` iestatiet derīgu lietotāja vārdu un paroli.
+5. Failā `config.js` iestatiet, GitHub, derīgu lietotāja vārdu un paroli.
    
     ```
     validCredentials: {
