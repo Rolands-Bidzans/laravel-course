@@ -83,6 +83,6 @@ Testus var palaist chrome vai firefox browseros sekojoši:
 
 ### Testu paralēla palaišana
 
-Visu testu palaišana paralēli. Lai palaistu testus paralēli, failā `nightwatch.conf.js` uzstādiet test_settings -> default -> test_workers -> enabled=`true` un palaidiet komandu:
+Visu testu palaišana paralēli. Lai palaistu testus paralēli, failā `nightwatch.conf.js` uzstādiet `test_settings` -> `default` -> `test_workers` -> `enabled=true` un palaidiet komandu:
 
 -`npm test`
