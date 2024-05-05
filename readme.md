@@ -56,9 +56,6 @@ vai
 -`npm run test -- --env chrome`
 
 ### Konkrēta testa palaišana
-Testu palaišana (default) browserī
-npm run test -- -t {src}/{test}
-
 Testus var palaist chrome(default) browserī sekojoši:
 
 -`npm run test -- -t .\tests\loginTests.js`
@@ -67,10 +64,7 @@ Testus var palaist chrome(default) browserī sekojoši:
 
 -`npm run test -- -t .\tests\topicDescriptionTests.js`
 
-
-Testu palaišana norādot browseri
-npm test -- -t {src}/{test} --env {browser}
-
+### Konkrēta testa palaišana, konkrētajā browserī
 Testus var palaist chrome vai firefox browseros sekojoši:
 
 -`npm run test -- -t .\tests\loginTests.js --env chrome`
@@ -78,8 +72,6 @@ Testus var palaist chrome vai firefox browseros sekojoši:
 -`npm run test -- -t .\tests\repositoryTests.js --env firefox`
 
 -`npm run test -- -t .\tests\topicDescriptionTests.js --env firefox`
-
-
 
 ### Testu paralēla palaišana
 
