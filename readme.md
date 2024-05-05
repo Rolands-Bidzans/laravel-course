@@ -30,6 +30,14 @@ npm versija: 10.5.2
 2. Pārliecinieties, ka jums ir instalētas Node.js un npm.
 3. Izmantojot terminālu, pārvietojieties uz projekta mapes atrašanās vietu.
 4. Izpildiet komandu `npm install`, lai instalētu projekta atkarības.
+5. Failā `config.js` iestatiet derīgu lietotāja vārdu un paroli.
+   
+    `validCredentials: {
+          email: 'Rolandsnorigas@gmail.com',
+          password: 'GIMazaisPipars@r2',
+         /* email: '???????????????',
+          password: '?????????????'*/
+    },`
 
 ## Nightwatch Config Faila Iestatījumi
 Nightwatch konfigurācijas fails (`nightwatch.conf.js`) ir konfigurēts šādi:
