@@ -19,11 +19,11 @@ The course is live now, get if with a discount (9.99\$):
 # Nightwatch Testu Projekts
 
 ## Apraksts
-Šis ir Node.js projekts, kas izmanto Nightwatch testus, lai automātiski testētu tīmekļa lietotnes. Projekts izmanto Page Objects izkārtojumu, kas padara testu uzturēšanu un izpildi vieglāku.
+Šis ir Node.js projekts, kas pielieto Nightwatch.js, ar mērķi veikt tīmekļa vietnes, github.com, dažādu scenāriju automātisko testēšanu. Projektā tiek pielietots Page Objects izkārtojums, ar mērķi padarīt testu uzturēšanu un rakstīšanu vieglāku.
 
 ### Izmantotās Node.js un npm versijas
-Node.js versija: 14.17.0
-npm versija: 6.14.13
+Node.js versija: v20.12.2
+npm versija: 10.5.2
 
 ## Projekta uzstādīšana
 1. Noklonējiet šo repozitoriju uz savu lokālo datoru.
@@ -40,6 +40,35 @@ Nightwatch konfigurācijas fails (`nightwatch.conf.js`) ir konfigurēts šādi:
 - `test_settings`: Iestatījumi testiem, tostarp noklusējuma pārlūka iestatījumi un konkrēti iestatījumi konkrētiem pārlūkiem.
 
 ## Testu Palaišana
-Lai palaistu testus, izmantojiet šādas komandas:
+Lai palaistu testus, izmantojiet:
+
+### Visu testu palaišana
+Visu testu palaišana crome browserī(default)
+-npm run test
+
+Visu testu palaišana norādot browseri
+-npm test -- --env firefox
+vai
+-npm test -- --env chrome
 
 ### Konkrēta testa palaišana
+Testu palaišana (default) browserī
+npm run test -- -t {src}/{test}
+
+Testus var palaist chrome(default) browserī sekojoši:
+-npm test -- -t .\tests\loginTests.js
+-npm test -- -t .\tests\repositoryTests.js
+-npm test -- -t .\tests\topicDescriptionTests.js
+
+Testu palaišana norādot browseri
+npm test -- -t {src}/{test} --env {browser}
+
+Testus var palaist chrome vai firefox browseros sekojoši:
+-npm test -- -t .\tests\loginTests.js --env chrome
+-npm test -- -t .\tests\repositoryTests.js --env firefox
+-npm test -- -t .\tests\topicDescriptionTests.js --env firefox
+
+
+### Testu palaišana konkrētā browserī
+
+### Testu paralēla palaišana
