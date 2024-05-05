@@ -56,9 +56,13 @@ Testu palaišana (default) browserī
 npm run test -- -t {src}/{test}
 
 Testus var palaist chrome(default) browserī sekojoši:
+
 -`npm test -- -t .\tests\loginTests.js`
+
 -`npm test -- -t .\tests\repositoryTests.js`
+
 -`npm test -- -t .\tests\topicDescriptionTests.js`
+
 
 Testu palaišana norādot browseri
 npm test -- -t {src}/{test} --env {browser}
