@@ -49,11 +49,11 @@ Visu testu palaišana crome browserī(default):
 
 Visu testu palaišana norādot browseri:
 
--`npm test -- --env firefox`
+-`npm run test -- --env firefox`
 
 vai
 
--`npm test -- --env chrome`
+-`npm run test -- --env chrome`
 
 ### Konkrēta testa palaišana
 Testu palaišana (default) browserī
@@ -61,11 +61,11 @@ npm run test -- -t {src}/{test}
 
 Testus var palaist chrome(default) browserī sekojoši:
 
--`npm test -- -t .\tests\loginTests.js`
+-`npm run test -- -t .\tests\loginTests.js`
 
--`npm test -- -t .\tests\repositoryTests.js`
+-`npm run test -- -t .\tests\repositoryTests.js`
 
--`npm test -- -t .\tests\topicDescriptionTests.js`
+-`npm run test -- -t .\tests\topicDescriptionTests.js`
 
 
 Testu palaišana norādot browseri
@@ -73,13 +73,16 @@ npm test -- -t {src}/{test} --env {browser}
 
 Testus var palaist chrome vai firefox browseros sekojoši:
 
--`npm test -- -t .\tests\loginTests.js --env chrome`
+-`npm run test -- -t .\tests\loginTests.js --env chrome`
 
--`npm test -- -t .\tests\repositoryTests.js --env firefox`
+-`npm run test -- -t .\tests\repositoryTests.js --env firefox`
 
--`npm test -- -t .\tests\topicDescriptionTests.js --env firefox`
+-`npm run test -- -t .\tests\topicDescriptionTests.js --env firefox`
 
 
-### Testu palaišana konkrētā browserī
 
 ### Testu paralēla palaišana
+
+Visu testu palaišana paralēli. Lai palaistu testus paralēli, failā `nightwatch.conf.js` uzstādiet test_settings -> default -> test_workers -> enabled=`true` un palaidiet komandu:
+
+-`npm test`
