@@ -46,9 +46,51 @@ npm versija: 10.5.2
 Nightwatch konfigurācijas fails (`nightwatch.conf.js`) ir konfigurēts šādi:
 
 - `src_folders`: Norāda, kur atrodas testu faili.
-- `page_objects_path`: Norāda, kur atrodas Page Objects izkārtojumu.
-- `webdriver`: Konfigurē Selenium WebDriver sākšanu, norādot portu un vai vajadzētu vai nē.
+- `page_objects_path`: Norāda, kur atrodas Page Objects izkārtojumi.
+- `webdriver`: Konfigurē Selenium WebDriver sākšanu, norādot portu un iespējojot to.
 - `test_settings`: Iestatījumi testiem, tostarp noklusējuma pārlūka iestatījumi un konkrēti iestatījumi konkrētiem pārlūkiem.
+#### Nightwatch Config Faila Iestatījumi
+
+module.exports = {
+    test_settings: {
+        default: {
+            desiredCapabilities: {
+                browserName: 'chrome'
+            },
+            webdriver: {
+                server_path:
+                    require('chromedriver').path
+            },
+            "screenshots" : {
+                "enabled" : false,
+                "on_failure" : true,
+                "path" : "./screens"
+            },
+            test_workers: {
+                enabled: true,
+                workers: 2//'auto'
+            }
+        },
+        chrome: {
+            desiredCapabilities: {
+                browserName: 'chrome'
+            },
+            webdriver: {
+                server_path:
+                    require('chromedriver').path
+            }
+        },
+        firefox: {
+            desiredCapabilities: {
+                browserName: 'firefox'
+            },
+            webdriver: {
+                server_path:
+                    ("/Users/rolan/OneDrive/Desktop/rtu2024/Rolands_Bidzans_NighWatch/node_modules/geckodriver/bin/geckodriver.js")
+            }
+        }
+    }
+};
 
 ## Testu Palaišana
 Lai palaistu testus, izmantojiet:
