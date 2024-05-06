@@ -61,7 +61,7 @@ Noklusētam(`Default`) pārlūkam tika iestatīts `webdriver`, kur definējam We
 ## Testu Palaišana
 Lai palaistu testus, izmantojiet:
 
-### Visu testu palaišana
+#### Visu testu palaišana
 Visu testu palaišana crome browserī(default):
 
 -`npm run test`
@@ -74,7 +74,7 @@ vai
 
 -`npm run test -- --env chrome`
 
-### Konkrēta testa palaišana
+#### Konkrēta testa palaišana
 Testus var palaist chrome(default) browserī sekojoši:
 
 -`npm run test -- -t .\tests\loginTests.js`
@@ -83,7 +83,7 @@ Testus var palaist chrome(default) browserī sekojoši:
 
 -`npm run test -- -t .\tests\topicDescriptionTests.js`
 
-### Konkrēta testa palaišana, konkrētajā browserī
+#### Konkrēta testa palaišana, konkrētajā browserī
 Testus var palaist chrome vai firefox browseros sekojoši:
 
 -`npm run test -- -t .\tests\loginTests.js --env chrome`
@@ -92,7 +92,7 @@ Testus var palaist chrome vai firefox browseros sekojoši:
 
 -`npm run test -- -t .\tests\topicDescriptionTests.js --env firefox`
 
-### Testu paralēla palaišana
+#### Testu paralēla palaišana
 
 Visu testu palaišana paralēli. Lai palaistu testus paralēli, failā `nightwatch.conf.js` uzstādiet `test_settings` -> `default` -> `test_workers` -> `enabled=true` un palaidiet komandu:
 
