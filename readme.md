@@ -21,7 +21,7 @@ The course is live now, get if with a discount (9.99\$):
 ## Apraksts
 Šis ir Node.js projekts, kas pielieto Nightwatch.js, ar mērķi veikt tīmekļa vietnes, github.com, dažādu scenāriju automātisko testēšanu. Projektā tiek pielietots Page Objects izkārtojums, ar mērķi padarīt testu rakstīšanu un uzturēšanu strukturētāku un vieglāku.
 
-### Izmantotās Node.js un npm versijas
+#### Izmantotās Node.js un npm versijas
 Node.js versija: v20.12.2
 npm versija: 10.5.2
 
