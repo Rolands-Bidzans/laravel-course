@@ -40,20 +40,35 @@ npm versija: 10.5.2
 
 #### Konfigurācijas failu, testa failu un Page Object failu izskārtojums
 ├── screenshots/
+
 ├── tests/
+
 │ ├── pageObjects
+
 │ │ ├── githubDashboard.js
+
 │ │ ├── githubHomePage.js
+
 │ │ ├── githubLoginPage.js
+
 │ │ ├── githubNewRepositoryPage.js
+
 │ │ ├── githubRepoGeneralPage.js
+
 │ │ ├── githubTopicsPage.js
+
 │ ├── loginTests.js
+
 │ ├── repositoryTests.js
+
 │ ├── topicDescriptionTests.js
+
 ├── config.js
+
 ├── nightwatch.conf.js
+
 ├── package.json
+
 └── README.md
 
 ## Projekta uzstādīšana
