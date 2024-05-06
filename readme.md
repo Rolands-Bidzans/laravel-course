@@ -19,7 +19,7 @@ The course is live now, get if with a discount (9.99\$):
 # Nightwatch Testu Projekts
 
 ## Apraksts
-Šis ir Node.js projekts, kas pielieto Nightwatch.js, ar mērķi veikt tīmekļa vietnes, github.com, dažādu scenāriju automātisko testēšanu. Projektā tiek pielietots Page Objects izkārtojums, ar mērķi padarīt testu uzturēšanu un rakstīšanu vieglāku.
+Šis ir Node.js projekts, kas pielieto Nightwatch.js, ar mērķi veikt tīmekļa vietnes, github.com, dažādu scenāriju automātisko testēšanu. Projektā tiek pielietots Page Objects izkārtojums, ar mērķi padarīt testu rakstīšanu un uzturēšanu strukturētāku un vieglāku.
 
 ### Izmantotās Node.js un npm versijas
 Node.js versija: v20.12.2
@@ -30,7 +30,7 @@ npm versija: 10.5.2
 2. Pārliecinieties, ka jums ir instalētas Node.js un npm.
 3. Izmantojot terminālu, pārvietojieties uz projekta mapes atrašanās vietu.
 4. Izpildiet komandu `npm install`, lai instalētu projekta atkarības.
-5. Failā `config.js` iestatiet, GitHub, derīgu lietotāja vārdu un paroli.
+5. Failā `config.js` iestatiet Jūsu, GitHub, derīgu lietotāja vārdu un paroli.
    
     ```
     validCredentials: {
@@ -53,22 +53,9 @@ Nightwatch konfigurācijas fails (`nightwatch.conf.js`) ir konfigurēts šādi:
 #### Pārlūku iestatījumi
 Noklusētam(`Default`) pārlūkam tika iestatīts `webdriver`, kur definējam WebDriver iestatījumus, norādot uz `DhromeDriver` izpildāmo failu, pēc noklusējuma testiem tiks izmantots `chrome` pārlūka. Tad `screenshots` definējam to, ka testu neveiksmīgas izpildes gadījumā tiks veikts ekrānšāviens un saglabāts `./screens` direktorijā/mapē. Beidzot `test_workers` konfigurējam, ka vienlaicīgi tiks izpildīti vairāki testi, ja `enabled` ir iestatīts uz `true`.
 
+`chrome` pārlūkam tika iestatīts `webdriver`, kas ir `DhromeDriver`, tas pats, kas tiek lietots pēc noklusējuma. Tad objektā `desiredCapabilities`, kur norāda pārlūkas iespējas instances, mēs norādam, ka testi tiks veikti `chrome` pārlūkā.
 
-        chrome: {
-            desiredCapabilities: {
-                browserName: 'chrome'
-            },
-            webdriver: {
-                server_path:
-                    require('chromedriver').path
-            }
-        },
-        firefox: {
-            desiredCapabilities: {
-                browserName: 'firefox'
-            },
-            webdriver: {
-                server_path:
+`firefox` pārlūkam tika iestatīts `webdriver`, kas ir `geckodriver`. Tad objektā `desiredCapabilities`, kur norāda pārlūkas iespējas instances, mēs norādam, ka testi tiks veikti `firefox` pārlūkā.
                 
 
 ## Testu Palaišana
