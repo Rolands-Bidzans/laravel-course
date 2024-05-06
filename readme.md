@@ -51,7 +51,7 @@ Nightwatch konfigurācijas fails (`nightwatch.conf.js`) ir konfigurēts šādi:
 - `test_settings`: Konfigurē iestatījumus testiem. Konfigurē iestatījumus noklusētam(default) pārlūkam(browserim) un chrome, firefox pārlūkiem.
 - 
 #### Pārlūku iestatījumi
-Noklusētam(`Default`) pārlūkam tika iestatīts `webdriver`, kur definējam WebDriver iestatījumus, norādot uz `DhromeDriver` izpildāmo failu, pēc noklusējuma testiem tiks izmantots `chrome` pārlūka. Tad `screenshots` definējam to, ka testu neveiksmīgas izpildes gadījumā tiks veikts ekrānšāviens un saglabāts `./screens` direktorijā/mapē. Beidzot `test_workers` konfigurējam, ka vienlaicīgi tiks izpildīti vairāki testi, ja `enabled` ir iestatīts uz `true`.
+Noklusētam(`Default`) pārlūkam tika iestatīts `webdriver`, kur definējam WebDriver iestatījumus, norādot uz `DhromeDriver` izpildāmo failu, pēc noklusējuma testiem tiks izmantots `chrome` pārlūka. Tad `screenshots` definējam to, ka testu neveiksmīgas izpildes gadījumā tiks veikts ekrānšāviens un saglabāts `./screens` direktorijā/mapē. Beidzot `test_workers` konfigurējam, ka vienlaicīgi tiks izpildīti vairāki testi, ja `enabled` ir iestatīts uz `true`.Paramets `workers` norāda, cik testi tiks veikti paralēli.
 
 `chrome` pārlūkam tika iestatīts `webdriver`, kas ir `DhromeDriver`, tas pats, kas tiek lietots pēc noklusējuma. Tad objektā `desiredCapabilities`, kur norāda pārlūkas iespējas instances, mēs norādam, ka testi tiks veikti `chrome` pārlūkā.
 
