@@ -21,9 +21,40 @@ The course is live now, get if with a discount (9.99\$):
 ## Apraksts
 Šis ir Node.js projekts, kas pielieto Nightwatch.js, ar mērķi veikt tīmekļa vietnes, github.com, dažādu scenāriju automātisko testēšanu. Projektā tiek pielietots Page Objects izkārtojums, ar mērķi padarīt testu rakstīšanu un uzturēšanu strukturētāku un vieglāku.
 
+#### Veiktie uzdevumi
+1) Tik automatizēti sekojošie scenāriji:
+1. Pārbaudīt, vai ir iespējams ieiet (ielogoties) ar derīgu lietotājvārdu un paroli.
+2. Apstiprināt, ka, ievadot nepareizu paroli, lietotājs NAV pieteicies un lietotājam
+tiek parādīts kļūdas ziņojums.
+(1. un 2. scenāriji tika apvienoti vienā failā `loginTests.js`)
+3. Pārbaudīt, vai lietotājs var izveidot repozitoriju un izveidotais repozitorijs tiek rādīts
+mājaslapā. (https://github.com/).
+4. Pārbaudīt, vai lietotājs var izdzēst repozitoriju.
+5. Pārbaudīt, vai dzēstais repozitorijs NAV redzams sākumlapā. (https://github.com/).
+(3. - 5. scenāriji tika apvienoti vienā failā `repositoryTests.js`)
+6. Pārbaudīt, vai visi tēmu apraksti (https://github.com/topics) nepārsniedz 500 rakstzīmes. Test atrodās `topicDescriptionTests.js` failā.
+
 #### Izmantotās Node.js un npm versijas
 Node.js versija: v20.12.2
 npm versija: 10.5.2
+
+#### Konfigurācijas failu, testa failu un Page Object failu izskārtojums
+├── screenshots/
+├── tests/
+│ ├── pageObjects
+│ │ ├── githubDashboard.js
+│ │ ├── githubHomePage.js
+│ │ ├── githubLoginPage.js
+│ │ ├── githubNewRepositoryPage.js
+│ │ ├── githubRepoGeneralPage.js
+│ │ ├── githubTopicsPage.js
+│ ├── loginTests.js
+│ ├── repositoryTests.js
+│ ├── topicDescriptionTests.js
+├── config.js
+├── nightwatch.conf.js
+├── package.json
+└── README.md
 
 ## Projekta uzstādīšana
 1. Noklonējiet šo repozitoriju uz savu lokālo datoru.
@@ -57,7 +88,6 @@ Noklusētam(`Default`) pārlūkam tika iestatīts `webdriver`, kur definējam We
 
 `firefox` pārlūkam tika iestatīts `webdriver`, kas ir `geckodriver`. Tad objektā `desiredCapabilities`, kur norāda pārlūkas iespējas instances, mēs norādam, ka testi tiks veikti `firefox` pārlūkā.
                 
-
 ## Testu Palaišana
 Lai palaistu testus, izmantojiet:
 
