@@ -47,30 +47,13 @@ Nightwatch konfigurācijas fails (`nightwatch.conf.js`) ir konfigurēts šādi:
 
 - `src_folders`: Norāda, kur atrodas testu faili.
 - `page_objects_path`: Norāda, kur atrodas Page Objects izkārtojumi.
-- `webdriver`: Konfigurē Selenium WebDriver sākšanu, norādot portu un iespējojot to.
-- `test_settings`: Iestatījumi testiem, tostarp noklusējuma pārlūka iestatījumi un konkrēti iestatījumi konkrētiem pārlūkiem.
-#### Nightwatch Config Faila Iestatījumi
+- `webdriver`: Konfigurē Selenium WebDriver, norādot portu un iespējojot to.
+- `test_settings`: Konfigurē iestatījumus testiem. Konfigurē iestatījumus noklusētam(default) pārlūkam(browserim) un chrome, firefox pārlūkiem.
+- 
+#### Pārlūku iestatījumi
+Noklusētam(`Default`) pārlūkam tika iestatīts `webdriver`, kur definējam WebDriver iestatījumus, norādot uz `DhromeDriver` izpildāmo failu, pēc noklusējuma testiem tiks izmantots `chrome` pārlūka. Tad `screenshots` definējam to, ka testu neveiksmīgas izpildes gadījumā tiks veikts ekrānšāviens un saglabāts `./screens` direktorijā/mapē. Beidzot `test_workers` konfigurējam, ka vienlaicīgi tiks izpildīti vairāki testi, ja `enabled` ir iestatīts uz `true`.
 
-module.exports = {
-    test_settings: {
-        default: {
-            desiredCapabilities: {
-                browserName: 'chrome'
-            },
-            webdriver: {
-                server_path:
-                    require('chromedriver').path
-            },
-            "screenshots" : {
-                "enabled" : false,
-                "on_failure" : true,
-                "path" : "./screens"
-            },
-            test_workers: {
-                enabled: true,
-                workers: 2//'auto'
-            }
-        },
+
         chrome: {
             desiredCapabilities: {
                 browserName: 'chrome'
@@ -86,11 +69,7 @@ module.exports = {
             },
             webdriver: {
                 server_path:
-                    ("/Users/rolan/OneDrive/Desktop/rtu2024/Rolands_Bidzans_NighWatch/node_modules/geckodriver/bin/geckodriver.js")
-            }
-        }
-    }
-};
+                
 
 ## Testu Palaišana
 Lai palaistu testus, izmantojiet:
