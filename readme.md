@@ -38,39 +38,6 @@ mājaslapā. (https://github.com/).
 Node.js versija: v20.12.2
 npm versija: 10.5.2
 
-#### Konfigurācijas failu, testa failu un Page Object failu izskārtojums
-├── screenshots/
-
-├── tests/
-
-│ ├── pageObjects
-
-│ │ ├── githubDashboard.js
-
-│ │ ├── githubHomePage.js
-
-│ │ ├── githubLoginPage.js
-
-│ │ ├── githubNewRepositoryPage.js
-
-│ │ ├── githubRepoGeneralPage.js
-
-│ │ ├── githubTopicsPage.js
-
-│ ├── loginTests.js
-
-│ ├── repositoryTests.js
-
-│ ├── topicDescriptionTests.js
-
-├── config.js
-
-├── nightwatch.conf.js
-
-├── package.json
-
-└── README.md
-
 ## Projekta uzstādīšana
 1. Noklonējiet šo repozitoriju uz savu lokālo datoru.
 2. Pārliecinieties, ka jums ir instalētas Node.js un npm.
@@ -142,3 +109,4 @@ Testus var palaist chrome vai firefox browseros sekojoši:
 Visu testu palaišana paralēli. Lai palaistu testus paralēli, failā `nightwatch.conf.js` uzstādiet `test_settings` -> `default` -> `test_workers` -> `enabled=true` un palaidiet komandu:
 
 -`npm test`
+
